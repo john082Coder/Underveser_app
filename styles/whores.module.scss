@@ -1,0 +1,241 @@
+.whores_bars_main{
+    border-top: 7px solid #384643;
+}
+.whores_bars_wrapper{
+    display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    .whores_center_bar{
+        background: #161616;
+        flex: 2;
+        padding: 2%;
+        .box2_wrapper{
+            width: 100%;
+            display: flex;
+            gap: 3%;
+            overflow: hidden;
+            margin-top: 12px;
+            flex-wrap: wrap;
+            .item{
+                height: 300px;
+                width: 48%;
+                padding: 0;
+                background: #A07B02;
+                margin-top: 5px;
+                .box1{
+                    height:90%;
+                    width: 100%;
+                    margin: 0;
+                    display: flex;
+                    .whore_pic{
+                        width: 70%;
+                        position: relative;
+                    }
+                    .btns_wrapper{
+                        width: 30%;
+                       
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2%;
+                        padding-left: 2px;
+                        button{
+                            width: 95%;
+                            flex: 1;
+                            border-radius: 0;
+                            background: #ddb11e;
+                            display: flex;
+                            align-items: center;
+                            font-size: 11px;
+                            justify-content: center;
+                            cursor: pointer;
+                            font-weight: bold;
+                            color: rgb(63, 62, 62);
+                            text-transform: capitalize;
+                            font-family: Arial, Helvetica, sans-serif;
+                            &:hover{
+                                opacity: 0.6;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .box2{
+                    height:10%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    p{
+                        color: rgb(218, 218, 218);
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        font-weight: bold;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        hr{
+            width: 95%;
+            margin-left: 2.5%;
+            margin-top: 25px;
+        }
+        .box1{
+            display: flex;
+            width: 95%;
+            margin-left: 2.5%;
+            margin-top: 5px;
+            p{
+                color: rgb(197, 194, 194);
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                width: calc(100% - 120px);
+                font-size: 15px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            button{
+                border: none;
+                background: #775b00;
+                width: 120px;
+                height: 25px;
+                color: rgb(204, 202, 202);
+                border-radius: 15px;
+                border: 1px solid white;
+            }
+        }
+        h1{
+            color: #D4D4D4;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin-top: 10px;
+        }
+        p.info{
+            color: rgb(151, 150, 150);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(226, 224, 224);
+            background:#A07B02 ;
+            font-weight:bold;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 10px;
+            border-radius: 10px;
+            width: 150px;
+            gap:3%;
+            svg{
+                height: 13px;
+                color: rgb(255, 254, 254);
+            }
+        }
+        .link_wrapper{
+            width: 95%;
+            margin-left: 2.5%;
+            min-height: 35px;
+            max-height:auto;
+            border:2px solid #A07B02;
+            background-color: rgba(83, 18, 18,0.3);
+            display: flex;
+            margin-top: 15px;
+            overflow: hidden;
+            p{  overflow: hidden;
+                color: rgb(219, 216, 216);
+                font-style: italic;
+                width: 80%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            button{
+                width: 20%;
+                background: #A07B02;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@media (max-width:650px){
+    .whores_bars_wrapper{
+        width: 100%;
+        .whores_center_bar{
+                width: 100%;
+            .box2_wrapper{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 13px;
+                padding-bottom: 13px;
+                .item{
+                    height: 300px;
+                    max-width: 100%;
+                    min-width: 100%;
+                    .box2{
+                        p{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+             hr{
+                 width: 100%;
+                 margin-left: 0px;
+             }
+            .box1{
+                width: 100%;
+                margin-left: 0px;
+                p{
+                    font-size: 8px;
+                    height: 100%;
+                    width: calc(100% - 80px);
+                }
+                button{
+                    font-size: 8px;
+                    width: 80px;
+                }
+            }
+            h1{
+                font-size: 15px;
+            }
+            p.info{
+                font-size: 8px;
+            }
+            a{
+                width:130px;
+                font-size: 7px;
+                svg{
+                    height: 12px;
+                }
+            }
+            .link_wrapper{
+                width: 95%;
+                margin-left: 2.5%;
+                p{
+                    font-size: 9px;
+                }
+                button{
+                    font-size: 8px;
+                    svg{
+                        height: 12px;
+                        width: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

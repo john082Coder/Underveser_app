@@ -1,0 +1,116 @@
+.home_bars_main{
+    border-top: 7px solid #262f2d;
+}
+.home_bars_wrapper{
+    display: flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .home_center{
+        flex: 2;
+        background: #161616;
+        padding: 2%;
+        a.upgrade{
+            display: block;
+            text-decoration: none;
+            color: #cf1b1b;
+            font-family: sans-serif;
+            &:hover{
+                color: #b42a2a;
+            }
+            span{
+                color: rgb(192, 192, 192);
+                font-size: 13px;
+                font-weight: bold;
+            }
+        }
+        h1{
+            color: #D4D4D4;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin-top: 10px;
+        }
+        h2{
+            margin-top: 10px;
+            color: #C71C1C;
+            font-family: sans-serif;
+        }
+        p.txt{
+            color: rgb(151, 150, 150);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 13px;
+            margin-bottom: 7px;
+            a{
+                text-decoration: none;
+                color: #cf1b1b;
+                font-family: sans-serif;
+                font-weight: bold;
+                text-transform: capitalize;
+                &:hover{
+                    color: #b42a2a;
+                }   
+            }
+        }
+        button{
+            border: none;
+            margin-top: 10px;
+            width: 30%;
+            margin-left: 30%;
+            background: #A07B02;
+            height: 35px;
+            border-radius: 15px;
+            color: rgb(230, 230, 230);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: capitalize;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+        .Image_wrapper{
+            height: 400px;
+            width: 95%;
+            margin-left: 2.5%;
+            position: relative;
+            margin-top: 15px;
+
+        }
+    }
+}
+@media (max-width:650px){
+    .home_bars_wrapper{
+        width: 100%;
+        .home_center{
+            h1{
+                font-size: 15px;
+            }
+            a.upgrade{
+                font-size: 11px;
+                span{
+                    font-size: 10px;
+                }
+            }
+            button{
+                width: 70%;
+                margin-left: 15%;
+                height: 25px;
+                font-size: 10px;
+            }
+            h2{
+                font-size: 14px;
+            }
+            p.txt{
+                font-size: 9px;
+            }
+            .Image_wrapper{
+                height: 300px;
+                width: 100%;
+            }
+        }
+    }
+}

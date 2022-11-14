@@ -1,0 +1,97 @@
+.settings_main_bar{
+    border-top: 7px solid #384643;
+}
+.settings_bars_wrapper{
+    display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    .settings_center_bar{
+        flex: 2;
+        background: #161616;
+        padding: 2%;
+        .form_wrapper{
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            label{
+                color: rgb(211, 208, 208);
+                text-align: center;
+                font-family: cursive;
+                
+            }
+            input{
+                height: 32px;
+                outline: none;
+                border: none;
+                border-radius: 25px;
+                padding-left: 7px;
+                border: 1px solid #F6DD4F;
+                background-color: #2c2b2b;
+                color: white;
+                cursor: pointer;
+                caret-color: white;
+            }
+            button{
+                width: 60%;
+                margin-left: 20%;
+                color: white;
+                height: 25px;
+                background-color:#c4a704 ;
+                border: none;
+                border-radius: 10px;
+                margin-top: 4px;
+            }
+        }
+        h1{
+            color: #D4D4D4;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        p{
+            color: rgb(151, 150, 150);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 13px;
+            margin-bottom: 7px;
+        }
+        h2{
+            color: rgb(173, 15, 15);
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    }
+}
+@media (max-width:650px){
+    .settings_bars_wrapper{
+        width: 100%;
+        .settings_center_bar{
+            .form_wrapper{
+                width: 90%;
+                input{
+                    height: 19px;
+                }
+                button{
+                    height: 16px;
+                    font-size: 10px;
+                }
+                label{
+                    font-size: 11px;
+                }
+            }
+            h1{
+                font-size: 15px;
+            }
+            p{
+                font-size: 10px;
+            }
+            h2{
+                font-size: 13px;
+            }
+        }
+    }
+}
