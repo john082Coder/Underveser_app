@@ -1,55 +1,70 @@
-import Image from "next/image"
-import SearchIcon from '@mui/icons-material/Search';
-import PersonIcon from '@mui/icons-material/Person';
-import {Logout} from '@mui/icons-material';
-import {Paid} from '@mui/icons-material';
-import { LocalHospital } from "@mui/icons-material";
-import { Bolt } from "@mui/icons-material";
-import { Message } from "@mui/icons-material";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import { useWeb3React } from "@web3-react/core"; 
+import Modals from "./Modals";
+import WalletModal from "./WalletModal";
+import useAuth from "../hooks/useAuth";
 export default function Nav() {
+    let router = useRouter();
+    const { login, logout } = useAuth();
+    const { account } = useWeb3React();
+    const [ isShow, setIsShow] = useState(false);
+
+
+    // const checkWalletConnected = async () => {
+    //     const { ethereum } = window;
+    //     if (!ethereum) {
+    //         alert('Install Metamask!')
+    //     }
+
+    //     try {
+    //         const accounts = await ethereum.request({method: 'eth_requestAccounts'});
+    //         setCurrentAccount(accounts[0]);
+    //         router.push('/overview');
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // }
+    const handleConnectWallet  = () => {
+        if(account)
+        {
+            logout();
+            return;
+        }
+        setIsShow(true);
+    }
+    useEffect(() => {
+        console.log("account = ", account)
+        if(account)
+          setIsShow(false);
+      }, [account]);
+    
     return(
-        <>
         <div className="top-bar-wrapper" >
-      {/*logo */}
             <div className="container">
-                    <div className="logo-wrapper" >
-                        <section>
-                            <Image src="/logo.png" alt="logo" layout="fill" />
-                        </section>
-                    </div>
+                <div className="nav-logo">
+                    <Image src="/logo.png" alt="logo" layout="fill" />
+                </div>
                 
-                {/* brief-details */}
-                    <div className="brief-details-wrapper" >
-                        <div className="item" >
-                            <p>john doe</p>
-                            <button style={{display:"none"}} > <Logout /></button>
-                        </div>
-                        <div className="item" >
-                        <section><Paid></Paid> <p>money:<span>$30,000</span></p></section>
-                        </div>
-                        <div className="item" >
-                            <section><LocalHospital></LocalHospital> <p>life:</p></section>
-                            <section><div></div></section> 
-                        </div>
-                        
-                        <div className="item" >
-                        <section><Bolt></Bolt> <p>energy:</p></section>
-                            <section><div></div></section> 
-                        </div>
-                        <div className="item" >
-                            <div>
-                                <section>
-                                <Message />
-                                <span>3</span>
-                                </section>
-                            </div>
-                            <section>
-                                <p>experience :53</p>
-                            </section>
-                        </div>
-                    </div>
+                <div className="brief-details-wrapper" >
+                    { 
+                      
+                            <>
+                                <Link  href=''>
+                                    <a onClick={handleConnectWallet}>{ account ? account.replace(/(.{4}).*(.{4})/, "$1...$2") : "Connect Wallet" }
+                                    </a>
+                                </Link>
+                              
+                            </>
+                    } 
+                    
+                </div>
             </div>
+            <Modals show={isShow} onHide={() => setIsShow(false)} size="md">
+                <WalletModal onClose={() => setIsShow(false)} />
+            </Modals>
         </div>
-        </>
     )
 }
