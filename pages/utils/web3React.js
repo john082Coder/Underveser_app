@@ -4,7 +4,7 @@ import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { ConnectorNames } from "@pancakeswap/uikit";
 import { ethers } from "ethers";
 import getNodeUrl from "./getRpcUrl";
-import { DEFAULT_CHAINID } from "../constants";
+import { DEFAULT_CHAINID } from "../../constants";
 
 const POLLING_INTERVAL = 12000;
 const rpcUrl = getNodeUrl();

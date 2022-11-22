@@ -1,6 +1,6 @@
 // Set of helper functions to facilitate wallet setup
 
-import { BASE_POLYGON_SCAN_URL } from "../constants";
+import { BASE_POLYGON_SCAN_URL } from "../../constants";
 import { nodes } from "./getRpcUrl";
 
 /**
