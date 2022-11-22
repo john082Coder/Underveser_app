@@ -11,7 +11,7 @@ import {
 } from "@web3-react/walletconnect-connector";
 import { connectorLocalStorageKey } from "@pancakeswap/uikit";
 import  setupNetwork  from "../utils/wallet";
-import  connectorsByName  from "../utils/web3React";
+import  { connectorsByName }  from "../utils/web3React";
 import { useRouter } from "next/router";
 
 

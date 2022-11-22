@@ -18,16 +18,15 @@ const walletconnect = new WalletConnectConnector({
   pollingInterval: POLLING_INTERVAL,
 });
 
- const connectorsByName = {
+export const connectorsByName = {
   [ConnectorNames.Injected]: injected,
   [ConnectorNames.WalletConnect]: walletconnect,
   
 };
 
-export const getLibrary = (provider) => {
+ const getLibrary = (provider) => {
   const library = new ethers.providers.Web3Provider(provider);
   library.pollingInterval = POLLING_INTERVAL;
   return library;
 };
-
-export default connectorsByName;
+export default getLibrary;
