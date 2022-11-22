@@ -7,7 +7,7 @@ import Nav from "./components/nav";
 export default function Index() {
 
   return (
-      <div style={{display: "flex", flexDirection: 'column', alignItems: 'center'}}>
+      <div style={{display: "flex", flexDirection: 'column', alignItems: 'center', backgroundColor: '#111111'}}>
         <Head>
           <title>under verse</title>
           <link rel="shortcut icon" href="logo.png" type="image/png" />
@@ -16,8 +16,10 @@ export default function Index() {
       {/*MAIN CONTENT*/ }
       <div className="main-content-wrapper" >
         <h1>Online Mafia Game</h1>
-        <p>under verse is a free mafia game in which you can become the godfather of the underworld.</p>
-        <p>Steal a Ferrari, rob banks and build your own villa! You can play this game every day!</p>
+        <div className="d-flex flex-column justify-content-center align-items-center" style={{width: '90%',margin: "15px 0 15px 5%"}}>
+          <p>under verse is a free mafia game in which you can become the godfather of the underworld.</p>
+          <p>Steal a Ferrari, rob banks and build your own villa! You can play this game every day!</p>
+        </div>
         <Link href=""><a >play for free now</a></Link>
         <div className="image-wrapper" >
           <Image src="/mafia.jpg" alt="image" layout="fill" width="200" />

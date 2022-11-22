@@ -1,16 +1,20 @@
+@import url('https://fonts.cdnfonts.com/css/rupturedsans');
 
 body{
     height: 100%;
     width: 100%;
     background: #111111;
+    p, h1, h1, h3, h4, h5, h6 {
+        font-family: cursive!important;
+    }
 }
+// 'rupturedsans'
 *{
-    overflow-x: hidden;
+    // overflow-x: hidden;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-@import url('https://fonts.cdnfonts.com/css/rupturedsans');
 $secondary:#161616;
 /*TOP BAR */
 .top-bar-wrapper{
@@ -257,6 +261,7 @@ $secondary:#161616;
             justify-content: left;
             position: relative;
             gap: 10%;
+
             svg{
                 color:rgb(26, 241, 26);
                 margin-left: 4%;
@@ -295,7 +300,7 @@ $secondary:#161616;
             display: block;
             width: 30%;
             height: 50px;
-            color: white;
+            color: white!important;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -310,6 +315,7 @@ $secondary:#161616;
             animation-duration: .6s;
             animation-iteration-count: infinite;
             transition: 0.3s linear;
+            cursor: pointer;
         }
 
         a:hover {
@@ -415,7 +421,7 @@ $secondary:#161616;
     h1{
         text-align: center;
         color: #d3d1d1;
-        font-family: 'RupturedSans', sans-serif;
+        font-family: 'RupturedSans', sans-serif!important;
         font-size:30px;
         font-weight: 500;
         margin-bottom: 40px;
@@ -436,7 +442,7 @@ $secondary:#161616;
 
     p{
         color: white;
-        font-family: 'RupturedSans', sans-serif;
+        font-family: 'RupturedSans', sans-serif!important;
         text-align: center;
         font-size: large;
         margin-bottom: 7px;
@@ -466,6 +472,7 @@ $secondary:#161616;
 
     a:hover {
         border: 1px solid white;
+        color: white;
     }
 
     @keyframes dim_1 {
@@ -522,7 +529,7 @@ border-left:2px solid #4e4e4e;
             justify-content: center;
             gap: 8px;
             font-weight: 900;
-            font-family: 'Alfa Slab One', sans-serif;
+            // font-family: 'rupturedsans'!important;
             margin-top: 20px;
             margin-bottom: 15px;
         }
@@ -539,7 +546,7 @@ border-left:2px solid #4e4e4e;
                 text-transform: capitalize;
                 display: flex;
                 align-items: center;
-                font-family: 'RupturedSans' sans-serif!important;
+                font-family: cursive!important;
                 &:hover{
                     border-left: 5px solid #ff001d ;
                     color:#ff001d ;
@@ -554,9 +561,11 @@ border-left:2px solid #4e4e4e;
     @extend .left-bar
     
 }
+
 .over-view-main{
     border-top: 7px solid #384643;
 }
+
 .over-view-bars-wrapper{
     width: 100%;
     min-height: calc(100vh - 200px);
@@ -574,7 +583,7 @@ border-left:2px solid #4e4e4e;
             text-align: left;
             margin:5px 0 5px ;
             text-transform: capitalize;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family:'rupturedsans'!important;
             padding-left:5% ;
             font-weight: 600;
         }
@@ -617,8 +626,8 @@ border-left:2px solid #4e4e4e;
             a{
                 width: 30%;
                 height: 25px;
-                text-transform:capitalize;
-                font-family: 'RupturedSans' sans-serif;
+                text-transform: capitalize;
+                font-family: cursive !important;
                 text-decoration: none;
                 color: white;
                 background-color: #FFC50A;
@@ -627,19 +636,24 @@ border-left:2px solid #4e4e4e;
                 align-items: center;
                 border-radius: 5px;
                 font-weight: 500;
+                border: 1px solid #FFC50A;
+                transition: 0.2s linear;
+            }
+
+            a:hover {
+                background: transparent;
+                color: #FFC50A;
             }
         }
         .box-wrapper{
             width: 95%;
-            height: 400px;
             margin-left: 2.5%;
             border: 2px solid #F1CB42 ;
             margin-top: 10px;
             position: relative;
+
             div{
                 width: 100%;
-                height:100%;
-                position: absolute;
                 background: rgba(10, 10, 10, 0.4);
                 backdrop-filter: blur(1px);
                 z-index: 999999999999;
@@ -650,7 +664,7 @@ border-left:2px solid #4e4e4e;
                     flex-direction: column;
                     h2{
                         color: rgb(173, 15, 15);
-                        font-family: 'RupturedSans' sans-serif;
+                        font-family: 'RupturedSans';
                         text-align: center;
                         font-size: 17px;
                         font-weight: bold;
@@ -811,7 +825,7 @@ border-left:2px solid #4e4e4e;
         h1{
             color: rgb(199, 195, 195);
             text-align: left;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'RupturedSans'!important;
             font-weight: 600;
             text-transform: capitalize;
             margin-top: 8px;
@@ -847,7 +861,7 @@ border-left:2px solid #4e4e4e;
         h1{
             color: #D4D4D4;
             text-align: left;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'RupturedSans'!important;
             font-weight: 600;
             text-transform: capitalize;
             margin-top: 10px;
@@ -1251,6 +1265,37 @@ border-left:2px solid #4e4e4e;
             button{
                 margin-top: 5px;
             }
+        }
+    }
+}
+
+@import url('https://fonts.cdnfonts.com/css/rupturedsans');
+.modalBody {
+    background: linear-gradient(180deg, rgb(14 13 13) 0%, #690301 100%);
+    border: 1px solid white;
+
+    .walletModal {
+        .walletBtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 30px;
+            background: -webkit-linear-gradient(80deg, rgb(66, 20, 20) 0%, rgb(116, 15, 15) 100%);
+            border-radius: 10px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            color: white;
+            min-width: 250px;
+            transition: 0.3s linear;
+
+            div {
+                font-family: "RupturedSans", sans-serif;
+                letter-spacing: 3px;
+            }
+        }
+
+        .walletBtn:hover {
+            border: 1px solid white;
         }
     }
 }

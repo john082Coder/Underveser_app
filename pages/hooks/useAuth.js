@@ -12,11 +12,12 @@ import {
 import { connectorLocalStorageKey } from "@pancakeswap/uikit";
 import { setupNetwork } from "../utils/wallet";
 import { connectorsByName } from "../utils/web3React";
+import { useRouter } from "next/router";
 
 
 const useAuth = () => {
-  const { activate, deactivate } = useWeb3React();
-
+  const { activate, deactivate, account } = useWeb3React();
+  let router = useRouter();
 
   const login = useCallback(
     
@@ -45,12 +46,12 @@ const useAuth = () => {
                 const walletConnector = connector;
                 walletConnector.walletConnectProvider = null;
               }
-            
             } else {
              
             }
           }
         });
+        
       } else {
         
       }

@@ -7,7 +7,7 @@ export default function Explanation(){
     return(
         <>
         <Nav />
-        <div className={styles.explanation_main} >
+        <div className={styles.explanation_main} style={{backgroundColor: '#111111'}}>
             <div className={styles.explanation_bars_wrapper}>
                 <LeftBar />
                 <div className={styles.explanation_center_bar}>
@@ -17,7 +17,7 @@ export default function Explanation(){
                     <p>1. Do crimes (only the crimes you can do with your experience points).</p>
                     <p>2. Stealing scooters (no experience, but money).</p>
                     <p>3. Organized Crimes (requires a partner for this (if you request the Organized Crime you will get a code put it in the Chat at the bottom under GANGS - and there will often be enough people willing to join) start your Organized Crime and if the Crime goes well, you
-also earn money! people copy this and enter it in the address bar you automatically get a whore!</p>
+                        also earn money! people copy this and enter it in the address bar you automatically get a whore!</p>
                     <br />
                     <h2>How do I make money?</h2>
                     <p>1. Steal scooters and hope you get 1 then sell it.</p>
