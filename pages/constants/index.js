@@ -6,8 +6,8 @@ export const BASE_BSC_SCAN_URLS = {
   };
 
 export const DEFAULT_CHAINID = 56;
-export const BLOCKS_PER_YEAR = (60 / BSC_BLOCK_TIME) * 60 * 24 * 365; // 10512000
-export const BASE_BSC_SCAN_URL = BASE_BSC_SCAN_URLS[ChainId.MAINNET];*/
+export const BLOCKS_PER_YEAR = (60 / BSC_BLOCK_TIME) * 60 * 24 * 365; // 10512000*/
+export const BASE_BSC_SCAN_URL = BASE_BSC_SCAN_URLS[137];
 export const DEFAULT_CHAINID = 137;
 export const BASE_POLYGON_SCAN_URLS = {
   // [56]: "https://bscscan.com",
