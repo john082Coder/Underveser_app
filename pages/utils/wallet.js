@@ -7,7 +7,7 @@ import { nodes } from "./getRpcUrl";
  * Prompt the user to add BSC as a network on Metamask, or switch to BSC if the wallet is on a different network
  * @returns {boolean} true if the setup succeeded, false otherwise
  */
-export const setupNetwork = async () => {
+ const setupNetwork = async () => {
   const provider = window.ethereum;
   if (provider) {
     const chainId = 137;
@@ -41,4 +41,4 @@ export const setupNetwork = async () => {
   }
 };
 
-
+export default setupNetwork;
