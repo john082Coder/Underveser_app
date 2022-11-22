@@ -18,7 +18,7 @@ const walletconnect = new WalletConnectConnector({
   pollingInterval: POLLING_INTERVAL,
 });
 
-export const connectorsByName = {
+ const connectorsByName = {
   [ConnectorNames.Injected]: injected,
   [ConnectorNames.WalletConnect]: walletconnect,
   
@@ -29,3 +29,5 @@ export const getLibrary = (provider) => {
   library.pollingInterval = POLLING_INTERVAL;
   return library;
 };
+
+export default connectorsByName;
